@@ -28,3 +28,8 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+- Landing page is one route (`/`) composed of section components in `src/components/site/`; editable copy and data live in `src/content/` so text changes don't touch layout.
+- All WhatsApp links go through `whatsappLink()` in `src/content/site.ts` so the number lives in one place.
+- Styling uses tokens and `@utility` helpers in `src/styles.css` plus button variants (`serene`, `ivory`, …); no raw color classes in components.
