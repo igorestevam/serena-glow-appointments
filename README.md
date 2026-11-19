@@ -1,37 +1,44 @@
 # Serena Estética — Landing Page
 
-Landing page demonstrativa desenvolvida para uma clínica fictícia de estética, com foco em **experiência do usuário, identidade visual e conversão de visitantes em potenciais clientes**.
+Landing page demonstrativa de uma clínica fictícia de estética, desenvolvida para o portfólio da **ClickFocus**. O projeto combina uma identidade visual acolhedora com uma navegação intuitiva e chamadas para ação voltadas ao contato inicial via WhatsApp.
 
-Este projeto faz parte do portfólio da **ClickFocus**, agência digital especializada na criação de landing pages e experiências web personalizadas.
+> **Aviso:** a Serena Estética é uma marca fictícia. Os dados de contato e as opções de agendamento são demonstrativos, e não representam um serviço real.
 
 ## Sobre o projeto
 
-A proposta da Serena Estética é demonstrar como uma presença digital elegante, estratégica e responsiva pode ajudar uma clínica a apresentar seus serviços e facilitar o contato com potenciais clientes.
+A página apresenta tratamentos faciais e corporais, diferenciais da clínica, informações sobre o atendimento e respostas às principais dúvidas de visitantes. A direção visual utiliza tons de bege e verde-sálvia, elementos minimalistas e imagens para transmitir uma experiência sofisticada e acolhedora.
 
-O projeto utiliza uma identidade visual sofisticada e acolhedora, combinando tons de bege, verde-sálvia e elementos minimalistas.
+### Objetivos
 
-## Objetivos
+- Apresentar os serviços com clareza e boa hierarquia visual.
+- Facilitar a navegação em dispositivos móveis e computadores.
+- Direcionar visitantes interessados aos pontos de contato.
+- Demonstrar princípios de usabilidade, acessibilidade e design responsivo.
 
-- Apresentar os serviços da clínica de maneira clara e atrativa.
-- Transmitir profissionalismo e confiança por meio do design.
-- Direcionar a atenção do visitante para o agendamento.
-- Proporcionar uma experiência agradável em dispositivos móveis e desktops.
-- Aplicar princípios de usabilidade, hierarquia visual e conversão.
+## Funcionalidades
 
-## Funcionalidades e seções
+- **Layout responsivo:** interface adaptada a diferentes tamanhos de tela.
+- **Catálogo de tratamentos:** quatro serviços faciais e corporais com imagens e descrições.
+- **Chamadas para ação (CTAs):** botões para iniciar uma conversa sobre avaliação ou tratamento.
+- **Links demonstrativos de WhatsApp:** mensagens pré-preenchidas de acordo com a ação escolhida.
+- **Menu de navegação:** acesso às principais seções da página.
+- **Perguntas frequentes:** respostas em formato interativo.
+- **Componentização:** separação das seções e do conteúdo para facilitar a manutenção.
 
-- Página inicial com apresentação da clínica.
-- Seção de tratamentos e serviços.
-- Diferenciais e benefícios.
-- Chamadas para ação (CTAs) de agendamento.
-- Seção de perguntas frequentes.
-- Layout responsivo e navegação intuitiva.
+## Tecnologias
 
-## Tecnologias e desenvolvimento
+| Tecnologia | Aplicação |
+| --- | --- |
+| React 19 | Construção da interface |
+| TypeScript | Desenvolvimento tipado |
+| Tailwind CSS 4 | Estilização e responsividade |
+| TanStack Router / Start | Estrutura e roteamento da aplicação |
+| Vite | Ambiente de desenvolvimento e build |
+| Radix UI | Componentes de interface acessíveis |
+| Lucide React | Ícones |
+| Vitest | Ferramenta de testes |
 
-O projeto foi criado inicialmente com auxílio do [Lovable](https://lovable.dev/), uma plataforma de desenvolvimento assistido por inteligência artificial.
-
-A proposta envolve o uso de ferramentas modernas de desenvolvimento web, com foco em componentes reutilizáveis, organização do código e responsividade.
+O projeto foi criado inicialmente com auxílio do [Lovable](https://lovable.dev/), plataforma de desenvolvimento assistido por inteligência artificial.
 
 ## Executando localmente
 
@@ -39,36 +46,62 @@ A proposta envolve o uso de ferramentas modernas de desenvolvimento web, com foc
 
 1. Clone este repositório:
 
-   `git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git`
+   ```bash
+   git clone https://github.com/igorestevam/serena-glow-appointments.git
+   ```
 
 2. Acesse a pasta:
 
-   `cd SEU_REPOSITORIO`
+   ```bash
+   cd serena-glow-appointments
+   ```
 
 3. Instale as dependências:
 
-   `npm install`
+   ```bash
+   npm install
+   ```
 
-4. Inicie o servidor de desenvolvimento:
+4. Inicie o ambiente de desenvolvimento:
 
-   `npm run dev`
+   ```bash
+   npm run dev
+   ```
 
-5. Abra no navegador o endereço local informado pelo terminal.
+5. Abra no navegador o endereço local informado no terminal.
+
+### Comandos disponíveis
+
+| Comando | Descrição |
+| --- | --- |
+| `npm run dev` | Inicia o servidor de desenvolvimento |
+| `npm run build` | Gera o build do projeto |
+| `npm run preview` | Executa a prévia local do build |
+| `npm run lint` | Executa o ESLint |
+| `npm run test` | Executa os testes com Vitest |
+| `npm run format` | Formata os arquivos com Prettier |
+
+## Organização e personalização
+
+Os conteúdos da página estão concentrados nos arquivos:
+
+- `src/content/site.ts` — nome da clínica, contatos, horários, navegação e mensagens de WhatsApp.
+- `src/content/treatments.ts` — dados, descrições e imagens dos tratamentos.
+- `src/content/faq.ts` — perguntas e respostas frequentes.
+- `src/lib/whatsapp.ts` — construção dos links de WhatsApp com mensagem pré-preenchida.
+
+**Antes de usar em um projeto real:** substitua todos os dados fictícios, verifique as imagens e textos, configure um número válido de WhatsApp e teste os links e o comportamento da página.
 
 ## Demonstração
 
-O link da versão publicada será adicionado aqui.
+O link da versão publicada será adicionado aqui após o deploy.
 
 ## Sobre a ClickFocus
 
 **ClickFocus — A atenção do seu cliente onde realmente importa.**
 
-Criamos experiências digitais que unem design, tecnologia e estratégia para destacar negócios no ambiente online.
-
-## Aviso
-
-Este é um projeto fictício desenvolvido exclusivamente para fins de estudo e portfólio. A Serena Estética não representa uma clínica real. As informações de contato e eventuais recursos de agendamento são demonstrativos.
+A ClickFocus é uma agência digital focada em landing pages e experiências web que unem design, tecnologia e estratégia para destacar negócios no ambiente online.
 
 ---
 
-Desenvolvido para o portfólio da **ClickFocus**.
+**Projeto demonstrativo desenvolvido para o portfólio da ClickFocus.**
