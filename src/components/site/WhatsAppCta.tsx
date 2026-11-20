@@ -17,7 +17,7 @@ export function WhatsAppCta({
   label = "Agendar avaliação",
   message,
   variant = "serene",
-  size = "cta",
+  size = "pill",
   className,
   icon = "whatsapp",
 }: WhatsAppCtaProps) {

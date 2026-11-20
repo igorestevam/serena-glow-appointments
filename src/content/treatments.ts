@@ -1,13 +1,14 @@
-import limpeza from "@/assets/tratamento-limpeza.jpg.asset.json";
-import revitalizacao from "@/assets/tratamento-revitalizacao.jpg.asset.json";
-import massagemFacial from "@/assets/tratamento-massagem-facial.jpg.asset.json";
-import corporal from "@/assets/tratamento-corporal.jpg.asset.json";
+import limpeza from "@/assets/tratamento-limpeza.jpg";
+import peeling from "@/assets/tratamento-peeling.jpg";
+import massagemFacial from "@/assets/tratamento-massagem-facial.jpg";
+import corporal from "@/assets/tratamento-corporal.jpg";
 
 export type Treatment = {
   slug: string;
   name: string;
   category: "Facial" | "Corporal";
   description: string;
+  details: string[];
   image: string;
   alt: string;
 };
@@ -15,38 +16,42 @@ export type Treatment = {
 export const treatments: Treatment[] = [
   {
     slug: "limpeza-de-pele",
-    name: "Limpeza de pele",
+    name: "Limpeza de pele profunda",
     category: "Facial",
     description:
-      "Higienização, esfoliação, extração e máscara calmante no final. A frequência ideal muda de pele para pele e é combinada com você.",
-    image: limpeza.url,
-    alt: "Profissional de luvas aplicando máscara clara no rosto de uma cliente deitada na maca",
+      "Higienização, esfoliação e extração cuidadosa, finalizadas com máscara calmante adequada ao seu tipo de pele.",
+    details: ["Indicada após avaliação", "Protocolo adaptado à sua pele"],
+    image: limpeza,
+    alt: "Profissional realizando limpeza de pele com discos de algodão no rosto de uma cliente",
   },
   {
     slug: "revitalizacao-facial",
     name: "Revitalização facial",
     category: "Facial",
     description:
-      "Sessão voltada para hidratação e viço da pele, com ativos escolhidos a partir do que vimos na avaliação.",
-    image: revitalizacao.url,
-    alt: "Mulher aplicando uma gota de sérum no rosto com um conta-gotas de vidro",
+      "Combinação de ativos e técnicas para cuidar da hidratação e do viço da pele, escolhidos de acordo com a sua avaliação.",
+    details: ["Ativos selecionados por profissional", "Orientações de cuidado em casa"],
+    image: peeling,
+    alt: "Frascos de sérum com conta-gotas dourados sobre pedras de travertino e folhas de sálvia",
   },
   {
     slug: "massagem-facial",
-    name: "Massagem facial",
+    name: "Massagem facial relaxante",
     category: "Facial",
     description:
-      "Massagem manual no rosto, no couro cabeludo e no pescoço, para um momento de pausa. Pode ser feita sozinha ou junto de outro cuidado.",
-    image: massagemFacial.url,
-    alt: "Cliente de olhos fechados recebendo massagem nas têmporas, deitada com a cabeça apoiada em uma toalha",
+      "Manobras suaves com pedras e as mãos para um momento de relaxamento, aliviando a sensação de tensão no rosto.",
+    details: ["Sessão tranquila e sem pressa", "Pode complementar outros cuidados"],
+    image: massagemFacial,
+    alt: "Pedra gua sha de quartzo rosa deslizando pela maçã do rosto de uma mulher",
   },
   {
     slug: "cuidados-corporais",
     name: "Drenagem e cuidados corporais",
     category: "Corporal",
     description:
-      "Drenagem e massagens manuais para o corpo. A técnica e o número de sessões são definidos na consulta.",
-    image: corporal.url,
-    alt: "Mãos de profissional fazendo massagem sobre a perna de uma cliente coberta por toalha branca",
+      "Massagens e técnicas manuais voltadas ao bem-estar do corpo, com indicação definida em consulta.",
+    details: ["Técnicas manuais", "Ambiente reservado e acolhedor"],
+    image: corporal,
+    alt: "Toalhas enroladas em verde-sálvia e bege, pedras de massagem e óleo corporal sobre banco de madeira",
   },
 ];

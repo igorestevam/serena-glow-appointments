@@ -18,21 +18,22 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         // Serena Estética variants
         serene:
-          "rounded-sm bg-primary text-primary-foreground hover:bg-primary-hover active:bg-sage-deep",
+          "rounded-full bg-primary text-primary-foreground shadow-soft hover:bg-primary-hover hover:-translate-y-0.5 hover:shadow-lift active:translate-y-0 active:shadow-soft",
         "serene-outline":
-          "rounded-sm border border-foreground/30 bg-transparent text-foreground hover:border-foreground hover:bg-foreground/5 active:bg-foreground/10",
-        ivory: "rounded-sm bg-ivory text-sage-deep hover:bg-sand active:bg-sand-deep",
+          "rounded-full border border-foreground/25 bg-transparent text-foreground hover:border-primary hover:bg-sage-soft hover:text-sage-deep active:bg-sage-soft/70",
+        ivory:
+          "rounded-full bg-ivory text-sage-deep shadow-soft hover:bg-sand hover:-translate-y-0.5 hover:shadow-lift active:translate-y-0",
         "ivory-outline":
-          "rounded-sm border border-sage-deep-foreground/40 bg-transparent text-sage-deep-foreground hover:border-sage-deep-foreground hover:bg-sage-deep-foreground/10 active:bg-sage-deep-foreground/15",
+          "rounded-full border border-sage-deep-foreground/40 bg-transparent text-sage-deep-foreground hover:border-gold hover:bg-sage-deep-foreground/10 active:bg-sage-deep-foreground/15",
       },
       size: {
         default: "h-9 px-4 py-2",
         sm: "h-8 rounded-md px-3 text-xs",
         lg: "h-10 rounded-md px-8",
         icon: "h-9 w-9",
-        cta: "h-11 px-5 text-[0.92rem]",
-        "cta-sm": "h-9 px-4 text-[0.85rem]",
-        "cta-lg": "h-12 px-6 text-[0.95rem]",
+        pill: "h-12 px-7 text-[0.9rem] tracking-wide",
+        "pill-sm": "h-10 px-5 text-[0.82rem] tracking-wide",
+        "pill-lg": "h-14 px-9 text-base tracking-wide",
       },
     },
     defaultVariants: {

@@ -88,10 +88,7 @@ Os conteúdos da página estão concentrados nos arquivos:
 - `src/content/site.ts` — nome da clínica, contatos, horários, navegação e mensagens de WhatsApp.
 - `src/content/treatments.ts` — dados, descrições e imagens dos tratamentos.
 - `src/content/faq.ts` — perguntas e respostas frequentes.
-- `src/content/care.ts` — textos de “Como é o atendimento” e dos passos de agendamento.
 - `src/lib/whatsapp.ts` — construção dos links de WhatsApp com mensagem pré-preenchida.
-
-**Fotos:** imagens do [Unsplash](https://unsplash.com/license), de uso gratuito.
 
 **Antes de usar em um projeto real:** substitua todos os dados fictícios, verifique as imagens e textos, configure um número válido de WhatsApp e teste os links e o comportamento da página.
 

@@ -12,7 +12,7 @@ export const site = {
     whatsappDisplay: "(00) 00000-0000",
     whatsappNumber: "5500000000000",
     email: "contato@seudominio.com.br",
-    address: "Rua Exemplo, 000 · Bairro, Cidade/UF",
+    address: "Rua Exemplo, 000 — Bairro, Cidade/UF",
     hours: "Seg. a sex., 9h–19h · Sáb., 9h–13h",
     instagram: "@seuperfil",
   },
@@ -29,7 +29,7 @@ export const whatsappLink = (message: string = whatsappMessages.evaluation) =>
 
 export const navItems = [
   { href: "#tratamentos", label: "Tratamentos" },
-  { href: "#atendimento", label: "Atendimento" },
-  { href: "#como-agendar", label: "Como agendar" },
+  { href: "#diferenciais", label: "Diferenciais" },
+  { href: "#como-funciona", label: "Como funciona" },
   { href: "#duvidas", label: "Dúvidas" },
 ] as const;

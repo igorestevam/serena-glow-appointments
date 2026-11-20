@@ -2,19 +2,25 @@ import { cn } from "@/lib/utils";
 
 type LogoProps = { tone?: "light" | "dark"; className?: string };
 
-/** Text logotype: serif name followed by a small sans "estética". */
+/** Text logotype: serif italic name + spaced small caps. */
 export function Logo({ tone = "light", className }: LogoProps) {
   return (
-    <span className={cn("inline-flex items-baseline gap-1.5 leading-none", className)}>
+    <span className={cn("inline-flex items-baseline gap-2 leading-none", className)}>
       <span
-        className={cn("font-display text-[1.55rem]", tone === "dark" ? "text-sage-deep-foreground" : "text-sage-deep")}
+        className={cn(
+          "font-display text-[1.7rem] font-medium italic tracking-tight",
+          tone === "dark" ? "text-sage-deep-foreground" : "text-sage-deep",
+        )}
       >
         Serena
       </span>
       <span
-        className={cn("text-[0.8rem]", tone === "dark" ? "text-sage-deep-foreground/70" : "text-muted-foreground")}
+        className={cn(
+          "text-[0.62rem] font-semibold uppercase tracking-[0.32em]",
+          tone === "dark" ? "text-gold" : "text-gold-ink",
+        )}
       >
-        estética
+        Estética
       </span>
     </span>
   );

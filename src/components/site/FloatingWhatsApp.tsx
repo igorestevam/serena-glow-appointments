@@ -23,7 +23,7 @@ export function FloatingWhatsApp() {
       tabIndex={visible ? 0 : -1}
       aria-hidden={!visible}
       className={cn(
-        "fixed bottom-5 right-5 z-30 inline-flex size-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-soft transition-all duration-500 ease-serene hover:bg-primary-hover active:scale-95 sm:hidden",
+        "fixed bottom-5 right-5 z-30 inline-flex size-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lift transition-all duration-500 ease-serene hover:bg-primary-hover active:scale-95 sm:hidden",
         visible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-6 opacity-0",
       )}
     >

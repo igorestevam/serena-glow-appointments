@@ -4,7 +4,7 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 // Lovable uses Cloudflare for its own deployment. On Vercel, Nitro must emit
 // Vercel-compatible output instead of the default Cloudflare Worker bundle.
-const isVercel = Boolean(process.env.VERCEL);
+const isVercel = Boolean(process.env["VERCEL"]);
 
 export default defineConfig({
   tanstackStart: {
