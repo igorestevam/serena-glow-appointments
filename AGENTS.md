@@ -33,3 +33,4 @@ use the editor.
 - Landing page is one route (`/`) composed of section components in `src/components/site/`; editable copy and data live in `src/content/` so text changes don't touch layout.
 - All WhatsApp links go through `whatsappLink()` in `src/content/site.ts` so the number lives in one place.
 - Styling uses tokens and `@utility` helpers in `src/styles.css` plus button variants (`serene`, `ivory`, …); no raw color classes in components.
+- App photos are Lovable Assets pointers (`src/assets/*.asset.json`) imported and used via `.url`, so binaries stay out of the repo.

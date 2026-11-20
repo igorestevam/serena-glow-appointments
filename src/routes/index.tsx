@@ -10,7 +10,7 @@ import { Footer } from "@/components/site/Footer";
 import { FloatingWhatsApp } from "@/components/site/FloatingWhatsApp";
 import { faqs } from "@/content/faq";
 
-const title = "Serena Estética — Estética facial e corporal com avaliação individual";
+const title = "Serena Estética | Estética facial e corporal com hora marcada";
 const description =
   "Limpeza de pele, revitalização facial, massagem e cuidados corporais com avaliação individual e protocolos personalizados. Agende sua avaliação pelo WhatsApp.";
 

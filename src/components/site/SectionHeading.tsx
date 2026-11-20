@@ -1,52 +1,31 @@
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
-import { Reveal } from "./Reveal";
 
 type SectionHeadingProps = {
   id?: string;
-  eyebrow: string;
   title: ReactNode;
   description?: ReactNode;
-  align?: "left" | "center";
   tone?: "light" | "dark";
   className?: string;
 };
 
-export function SectionHeading({
-  id,
-  eyebrow,
-  title,
-  description,
-  align = "left",
-  tone = "light",
-  className,
-}: SectionHeadingProps) {
-  const centered = align === "center";
+export function SectionHeading({ id, title, description, tone = "light", className }: SectionHeadingProps) {
+  const dark = tone === "dark";
   return (
-    <Reveal className={cn("max-w-2xl", centered && "mx-auto text-center", className)}>
-      <p className={cn("eyebrow flex items-center gap-3", centered && "justify-center", tone === "dark" && "text-gold")}>
-        <span className="gold-rule" aria-hidden="true" />
-        {eyebrow}
-      </p>
-      <h2
-        id={id}
-        className={cn(
-          "mt-5 text-[2.35rem] leading-[1.05] sm:text-5xl lg:text-[3.6rem]",
-          tone === "dark" ? "text-sage-deep-foreground" : "text-foreground",
-        )}
-      >
+    <div className={cn("max-w-2xl", className)}>
+      <h2 id={id} className={cn("section-title", dark ? "text-sage-deep-foreground" : "text-foreground")}>
         {title}
       </h2>
       {description ? (
         <p
           className={cn(
-            "mt-5 text-base leading-relaxed sm:text-lg",
-            tone === "dark" ? "text-sage-deep-foreground/80" : "text-muted-foreground",
+            "mt-5 max-w-xl text-base leading-relaxed sm:text-[1.05rem]",
+            dark ? "text-sage-deep-foreground/80" : "text-muted-foreground",
           )}
         >
           {description}
         </p>
       ) : null}
-    </Reveal>
+    </div>
   );
 }

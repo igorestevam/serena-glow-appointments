@@ -1,31 +1,57 @@
-import { site } from "@/content/site";
+import sala from "@/assets/sala-atendimento.jpg.asset.json";
+import { site, whatsappLink } from "@/content/site";
 import { Reveal } from "./Reveal";
 import { WhatsAppCta } from "./WhatsAppCta";
 
 export function FinalCta() {
+  const details = [
+    {
+      term: "WhatsApp",
+      value: (
+        <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="link-underline rounded-sm">
+          {site.contact.whatsappDisplay}
+        </a>
+      ),
+    },
+    { term: "Endereço", value: site.contact.address },
+    { term: "Horário", value: site.contact.hours },
+  ];
+
   return (
-    <section aria-labelledby="cta-title" className="bg-background pb-20 sm:pb-28">
-      <div className="container-serene">
-        <Reveal className="relative overflow-hidden rounded-[2rem] bg-gradient-sand px-6 py-16 text-center shadow-soft sm:px-12 sm:py-24">
-          <div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-10 h-[130%] w-[min(34rem,90%)] -translate-x-1/2 arch border border-gold/40" />
-          <div className="relative mx-auto max-w-2xl">
-            <p className="eyebrow flex items-center justify-center gap-3">
-              <span className="gold-rule" aria-hidden="true" />
-              Agende sua avaliação
-              <span className="gold-rule" aria-hidden="true" />
-            </p>
-            <h2 id="cta-title" className="mt-6 text-[2.5rem] leading-[1.05] text-foreground sm:text-6xl">
-              Comece pelo <em className="italic text-primary">primeiro passo</em>: uma boa conversa.
-            </h2>
-            <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Agende uma avaliação e descubra, com orientação profissional, qual cuidado faz sentido para você.
-            </p>
-            <div className="mt-10 flex flex-col items-center gap-4">
-              <WhatsAppCta size="pill-lg" />
-              <p className="text-sm text-muted-foreground">{site.contact.hours}</p>
-            </div>
-          </div>
+    <section id="agendar" aria-labelledby="cta-title" className="bg-sand">
+      <div className="container-serene grid gap-10 py-16 sm:py-20 lg:grid-cols-12 lg:items-center lg:gap-16 lg:py-24">
+        <Reveal as="figure" className="lg:col-span-5">
+          <img
+            src={sala.url}
+            alt="Sala de atendimento com maca forrada em tom areia, pia de cerâmica e janela ampla"
+            width={1200}
+            height={1800}
+            loading="lazy"
+            decoding="async"
+            className="aspect-[4/3] w-full rounded-sm object-cover lg:aspect-[4/5]"
+          />
         </Reveal>
+
+        <div className="lg:col-span-7">
+          <h2 id="cta-title" className="section-title text-foreground">
+            Agende sua avaliação
+          </h2>
+          <p className="mt-5 max-w-lg text-base leading-relaxed text-muted-foreground sm:text-[1.05rem]">
+            Mande uma mensagem dizendo o dia e o período que prefere. A avaliação é sempre o primeiro passo, seja qual
+            for o tratamento.
+          </p>
+
+          <dl className="mt-10 grid gap-6 border-t border-foreground/15 pt-8 sm:grid-cols-3">
+            {details.map((d) => (
+              <div key={d.term}>
+                <dt className="text-[0.82rem] text-gold-ink">{d.term}</dt>
+                <dd className="mt-1.5 text-[0.95rem] leading-snug text-foreground">{d.value}</dd>
+              </div>
+            ))}
+          </dl>
+
+          <WhatsAppCta size="cta-lg" className="mt-10" />
+        </div>
       </div>
     </section>
   );
