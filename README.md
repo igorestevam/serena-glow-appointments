@@ -94,7 +94,9 @@ Os conteúdos da página estão concentrados nos arquivos:
 
 ## Demonstração
 
-O link da versão publicada será adicionado aqui após o deploy.
+[Visualizar a landing page na Vercel](https://serena-glow-appointments.vercel.app/)
+
+> **Aviso:** demonstração técnica. Antes de divulgar comercialmente, verifique a proteção de acesso e utilize uma hospedagem cujo plano permita uso comercial.
 
 ## Sobre a ClickFocus
 
