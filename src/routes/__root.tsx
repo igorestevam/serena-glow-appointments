@@ -100,7 +100,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/serena-favicon.svg", type: "image/svg+xml" },
+      { rel: "icon", href: "/serena-icon-v2.svg?v=2", type: "image/svg+xml" },
     ],
   }),
   shellComponent: RootShell,
